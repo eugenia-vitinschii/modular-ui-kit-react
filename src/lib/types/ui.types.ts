@@ -1,0 +1,8 @@
+/* UI VARIANTS */
+export type UIVariant = 'primary' | 'danger' | 'warning' | 'success' | 'secondary'
+export type UISize = 'sm' | 'md' | 'lg'
+
+/* TEXT */
+export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-caption' | 'muk-none'
+export type UITextAlign = 'left' | 'center' | 'right'
+export type UITextVariant = UIVariant | 'muted'
