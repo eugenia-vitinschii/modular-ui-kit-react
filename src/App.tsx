@@ -2,7 +2,8 @@ function App() {
 
   return (
    <div>
-      <h1>MODULAR UI KIT REACT</h1>
+      <h1 className="muk-heading">modular-ui-kit-react</h1>
+      <h2 className="muk-subheading">modular-ui-kit-react</h2>
    </div>
   )
 }
