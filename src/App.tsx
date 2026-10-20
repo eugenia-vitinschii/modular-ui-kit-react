@@ -1,9 +1,12 @@
-function App() {
+import { MukText } from "./lib/components/typography/MukText"
 
+
+function App() {
   return (
    <div>
-      <h1 className="muk-heading">modular-ui-kit-react</h1>
-      <h2 className="muk-subheading">modular-ui-kit-react</h2>
+    <MukText type='muk-heading' variant="primary" as='h1'>modular-ui-kit-react</MukText>
+     <MukText type='muk-subheading' variant="primary" as='h2'>modular-ui-kit-react</MukText>
+      <MukText  variant="secondary" variant="primary" as='p'>modular-ui-kit-react</MukText>
    </div>
   )
 }
