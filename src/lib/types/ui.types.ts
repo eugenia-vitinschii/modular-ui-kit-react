@@ -6,3 +6,7 @@ export type UISize = 'sm' | 'md' | 'lg'
 export type UITextType = 'muk-heading' | 'muk-subheading' | 'muk-body-text' | 'muk-caption' | 'muk-none'
 export type UITextAlign = 'left' | 'center' | 'right'
 export type UITextVariant = UIVariant | 'muted'
+
+/* BUTTONS */
+export type UIButtonVariant = UIVariant | 'ghost'
+export type UIButtonType = "button" | "submit" | "reset"
