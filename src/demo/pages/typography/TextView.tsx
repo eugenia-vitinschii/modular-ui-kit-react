@@ -6,7 +6,7 @@ function TextView(){
       <div className="muk-page">
          <div className="muk-container">
             <div className="muk-page__wrapper">
-                <MukText as="h1" type="muk-heading">Text Preview</MukText>
+                <MukText as="h2" type="muk-heading">Text Preview</MukText>
             </div>
             <div className="muk-page__content">
                <div className="demo-controls muk-section"></div>
