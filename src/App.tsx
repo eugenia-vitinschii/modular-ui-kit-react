@@ -7,11 +7,15 @@ function App() {
   return (
     <BrowserRouter>
       <div className="muk-wrapper">
-          <MukText type='muk-heading' variant="primary" as='h1'>modular-ui-kit-react</MukText>
+        <div className="muk-header">
+           <MukText type='muk-heading' variant="primary" as='h1'>modular-ui-kit-react</MukText>
+        </div>
         <main className="muk-content">
           <DemoRoutes/>
         </main>
+       <div className="muk-footer"><MukText variant="primary">modular-ui-kit-react</MukText></div> 
       </div>
+      
    </BrowserRouter>
   )
 }

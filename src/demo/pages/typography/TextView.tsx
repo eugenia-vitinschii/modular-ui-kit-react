@@ -6,10 +6,12 @@ function TextView(){
       <div className="muk-page">
          <div className="muk-container">
             <div className="muk-page__wrapper">
-                <MukText as="h2" type="muk-heading">Text Preview</MukText>
-            </div>
+               <MukText as="h2" type="muk-heading">Text Preview</MukText>
             <div className="muk-page__content">
-               <div className="demo-controls muk-section"></div>
+               <div className="demo-controls muk-section">
+                  <MukText>Lorem ipsum dolor sit.</MukText>
+               </div>
+            </div>
             </div>
          </div>
       </div>
