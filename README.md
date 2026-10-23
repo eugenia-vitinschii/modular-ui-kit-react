@@ -40,7 +40,7 @@ _________
 ### ⭐️ MukButton ⭐️
 A customizable button component that supports various visual variants, sizes, and states (including dynamic loading indicators and disability). It extends standard HTML button attributes and seamlessly handles async states.
 
-### MukButton Props
+#### MukButton Props
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -53,3 +53,22 @@ A customizable button component that supports various visual variants, sizes, an
 
 
 _______
+
+### ⭐️ MukIconButton ⭐️
+An extension of the standard button component optimized for icon-first or icon-with-text layouts. It supports standard button variants, states, and sizes, with a dedicated slot for icons (children) and an optional text slot (text), automatically applying the has-text state class when label content is present.
+
+
+#### MukIconButton Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `children` | `ReactNode` | — | Primary slot for the SVG icon or visual content. |
+| `text` | `ReactNode` | — | Optional slot for text label next to the icon. Triggers `has-text` class when provided. |
+| `variant` | `UIButtonVariant` | `'primary'` | Visual style preset (`primary`, `secondary`, `danger`, `warning`, etc.). |
+| `size` | `UISize` | `'lg'` | Button size dimensions (`sm`, `md`, `lg`). |
+| `type` | `UIButtonType` | `'button'` | Native HTML button type (`button`, `submit`, `reset`). |
+| `loading` | `boolean` | `false` | Displays a loading spinner and disables user interaction. |
+| `disabled` | `boolean` | `false` | Disables the button and prevents click events. |
+| `ariaLabel` | `string \| number` | — | Accessible label for screen readers (recommended when using icon-only mode). |
+
+_________
