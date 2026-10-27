@@ -10,3 +10,6 @@ export type UITextVariant = UIVariant | 'muted'
 /* BUTTONS */
 export type UIButtonVariant = UIVariant | 'ghost'
 export type UIButtonType = "button" | "submit" | "reset"
+
+/* INPUT TYPE */
+export type UIInputType = "text" | "email" | "password" | "search" | "date" | "tel" | "number"
