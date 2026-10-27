@@ -72,3 +72,22 @@ An extension of the standard button component optimized for icon-first or icon-w
 | `ariaLabel` | `string \| number` | — | Accessible label for screen readers (recommended when using icon-only mode). |
 
 _________
+
+### ⭐️ MukInput ⭐️
+A flexible and accessible text input component that supports floating labels, error/hint messages, and an optional built-in password visibility toggle. It extends native input attributes and seamlessly handles custom change events and validation states.
+
+#### MukInput Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `string \| number` | `''` | The current value of the input (controlled component state). |
+| `onChange` | `(value: string) => void` | — | Callback function triggered when the input value changes. |
+| `label` | `string` | — | Top floating label displayed above the input field. |
+| `placeholder` | `string` | — | Placeholder text shown when the input is empty. |
+| `hint` | `string` | — | Helper text displayed below the input (hidden if an error is present). |
+| `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
+| `type` | `UIInputType` | `'text'` | Native HTML input type (`text`, `password`, `email`, etc.). |
+| `showPasswordToggle` | `boolean` | `true` | Automatically adds a show/hide eye icon button when `type="password"`. |
+| `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
+| `disabled` | `boolean` | `false` | Disables user interaction and applies disabled styles. |
+| `autoComplete` | `string` | — | Native autocomplete attribute for browser autofill. |
