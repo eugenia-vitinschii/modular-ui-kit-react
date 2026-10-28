@@ -91,3 +91,22 @@ A flexible and accessible text input component that supports floating labels, er
 | `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
 | `disabled` | `boolean` | `false` | Disables user interaction and applies disabled styles. |
 | `autoComplete` | `string` | — | Native autocomplete attribute for browser autofill. |
+
+_________
+
+### ⭐️ MukCheckbox ⭐️
+
+An accessible and customizable checkbox component with a custom visual box, flexible label positioning, and support for error and hint validation states. It handles boolean states (checked/unchecked) seamlessly while maintaining native HTML input accessibility (aria-invalid, aria-describedby).
+
+
+### MukCheckbox Props 
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `boolean` | `false` | Controls the checked state of the checkbox (`true` for checked, `false` for unchecked). |
+| `onChange` | `(value: boolean) => void` | — | Callback function triggered when the state toggles, returning the new boolean value. |
+| `label` | `string` | — | Side label text displayed next to the checkbox. |
+| `hint` | `string` | — | Helper text displayed below the checkbox (hidden if an error is present). |
+| `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
+| `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
+| `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
