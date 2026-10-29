@@ -110,3 +110,23 @@ An accessible and customizable checkbox component with a custom visual box, flex
 | `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
 | `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
 | `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
+_________
+
+### ⭐️ MukRadio ⭐️
+
+An accessible and customizable radio button component designed to work seamlessly within group selections. It supports custom selection states, side labels, and built-in error/hint validation messages, while fully respecting native HTML radio accessibility standards (aria-invalid, aria-describedby).
+
+
+### MukRadio Props 
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `string \| number \| boolean` | *Required* | The unique value associated with this specific radio button. |
+| `selectedValue` | `string \| number \| boolean \| null` | — | The currently selected value of the entire radio group (used to determine `checked` state). |
+| `onChange` | `(value: string \| number \| boolean) => void` | — | Callback function triggered when selected, returning this button's value. |
+| `label` | `string` | — | Side label text displayed next to the radio circle. |
+| `name` | `string` | — | Native HTML `name` attribute to group radio buttons together. |
+| `hint` | `string` | — | Helper text displayed below the radio (hidden if an error is present). |
+| `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
+| `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
+| `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
