@@ -18,6 +18,7 @@ function CheckboxView() {
                value={isChecked}
                onChange={(val) => setIsChecked(val)}
                hint="You must agree before continuing."
+               disabled
             />
             </div>
           </div>

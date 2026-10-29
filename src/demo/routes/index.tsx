@@ -5,6 +5,7 @@ import ButtonView from "../pages/buttons/ButtonsView"
 import IconButtonView from "../pages/buttons/IconButtonView"
 import InputView from "../pages/form/InputView"
 import CheckboxView from "../pages/form/CheckboxView"
+import RadioView from "../pages/form/RadioView"
 
 export const DemoRoutes = () => {
    return (
@@ -15,6 +16,7 @@ export const DemoRoutes = () => {
          <Route path="/icon-buttons" element={<IconButtonView/>}/>
          <Route path="/input" element={<InputView/>}/>
          <Route path="/checkbox" element={<CheckboxView/>}/>
+         <Route path="/radio" element={<RadioView/>}/>
       </Routes>
    )
 }
