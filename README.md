@@ -130,3 +130,23 @@ An accessible and customizable radio button component designed to work seamlessl
 | `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
 | `id` | `string` | `useId()` | Unique identifier for the input, automatically generated if not provided. |
 | `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
+
+_________
+
+### ⭐️ MukSelect ⭐️
+
+An accessible dropdown select component built over the native HTML `<select>` element. It accepts a list of options, supports custom placeholders, labels, built-in validation states (errors and hints), and maintains full accessibility standards (aria-invalid, aria-describedby).
+
+### MukSelectProps 
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `string \| number` | `''` | The currently selected option value (controlled state). |
+| `onChange` | `(value: string) => void` | — | Callback function triggered when a new option is selected. |
+| `options` | `MukSelectOption[]` | `[]` | Array of option objects (`{ value: string \| number, label: string }`). |
+| `label` | `string` | — | Label displayed above the select element. |
+| `placeholder` | `string` | — | Default unselectable option text shown when no value is selected. |
+| `hint` | `string` | — | Helper text displayed below the select (hidden if an error is present). |
+| `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
+| `id` | `string` | `useId()` | Unique identifier for the select, automatically generated if not provided. |
+| `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
