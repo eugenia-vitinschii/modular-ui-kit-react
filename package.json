@@ -1,18 +1,53 @@
 {
   "name": "modular-ui-kit-react",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A modular, accessible TypeScript-driven UI library for React.",
   "type": "module",
+  "license": "MIT",
+  "author": "Eugenia Vitinschii",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "react18",
+    "react19",
+    "react-components",
+    "ui-kit",
+    "component-library",
+    "typescript",
+    "sass",
+    "design-system",
+    "frontend",
+    "responsive-ui"
+  ],
+  "homepage": "https://github.com/eugenia-vitinschii/modular-ui-kit-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenia-vitinschii/modular-ui-kit-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eugenia-vitinschii/modular-ui-kit-react/issues"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "react-router-dom": "^7.18.4"
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -24,9 +59,13 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "globals": "^17.13.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4",
     "sass": "^1.105.2",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.2",
-    "vite": "^8.3.4"
+    "vite": "^8.3.4",
+    "vite-plugin-dts": "^4.5.4"
   }
 }

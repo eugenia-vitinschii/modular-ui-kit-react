@@ -1,6 +1,6 @@
 import { type FC, useId, type SelectHTMLAttributes } from "react";
 
-export interface MukSelectedOption {
+export interface MukSelectOption {
    value: string | number;
    label: string;
 }
@@ -8,7 +8,7 @@ export interface MukSelectedOption {
 export interface MukSelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | "value">{
    value:  string | number;
    onChange?: (value: string) => void;
-   options: MukSelectedOption[];
+   options: MukSelectOption[];
    label?: string;
    hint?: string;
    error?: string;
