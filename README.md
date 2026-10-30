@@ -137,7 +137,7 @@ _________
 
 An accessible dropdown select component built over the native HTML `<select>` element. It accepts a list of options, supports custom placeholders, labels, built-in validation states (errors and hints), and maintains full accessibility standards (aria-invalid, aria-describedby).
 
-### MukSelectProps 
+### MukSelect Props 
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -149,4 +149,24 @@ An accessible dropdown select component built over the native HTML `<select>` el
 | `hint` | `string` | — | Helper text displayed below the select (hidden if an error is present). |
 | `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
 | `id` | `string` | `useId()` | Unique identifier for the select, automatically generated if not provided. |
+| `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
+
+_________
+
+### ⭐️ MukTextarea ⭐️
+
+A flexible and accessible multi-line text input component built over the native HTML `<textarea>`. It supports custom rows, auto-generated unique IDs, top labels, and built-in error/hint validation states while maintaining strict accessibility standards (`aria-invalid`, `aria-describedby`).
+
+### MukTextarea Props 
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `string \| number` | `''` | The current text value of the textarea (controlled component state). |
+| `onChange` | `(value: string) => void` | — | Callback function triggered when the text changes, returning the new string. |
+| `label` | `string` | — | Label displayed above the textarea element. |
+| `placeholder` | `string` | — | Placeholder text shown when the textarea is empty. |
+| `rows` | `number` | `6` | Number of visible text lines for the textarea control. |
+| `hint` | `string` | — | Helper text displayed below the textarea (hidden if an error is present). |
+| `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
+| `id` | `string` | `useId()` | Unique identifier for the textarea, automatically generated if not provided. |
 | `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
