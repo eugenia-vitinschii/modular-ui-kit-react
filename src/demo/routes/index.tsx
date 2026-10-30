@@ -7,6 +7,9 @@ import InputView from "../pages/form/InputView"
 import CheckboxView from "../pages/form/CheckboxView"
 import RadioView from "../pages/form/RadioView"
 import SelectView from "../pages/form/SelectView"
+import TextareaView from "../pages/form/TextareaView"
+
+
 
 export const DemoRoutes = () => {
    return (
@@ -19,6 +22,7 @@ export const DemoRoutes = () => {
          <Route path="/checkbox" element={<CheckboxView/>}/>
          <Route path="/radio" element={<RadioView/>}/>
          <Route path="/select" element={<SelectView/>}/>
+          <Route path="/textarea" element={<TextareaView/>}/>
       </Routes>
    )
 }

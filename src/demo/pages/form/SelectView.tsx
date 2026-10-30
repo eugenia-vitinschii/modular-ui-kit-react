@@ -17,7 +17,7 @@ function SelectView() {
       <div className="muk-container">
         <div className="muk-page__wrapper">
           <MukText as="h2" type="muk-heading">
-            Checkbox Preview
+            Select Preview
           </MukText>
           <div className="muk-page__content">
             <div className="demo-controls muk-section">
