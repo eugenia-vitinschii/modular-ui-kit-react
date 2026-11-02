@@ -1,8 +1,8 @@
 # modular-ui-kit-react
 
-[![NPM Version](https://img.shields.io/npm/v/vue-saas-kit?color=42b883)](https://www.npmjs.com/package/modular-ui-kit-react)
+[![NPM Version](https://img.shields.io/npm/v/modular-ui-kit-react?color=42b883)](https://www.npmjs.com/package/modular-ui-kit-react)
 
-[![NPM Downloads](https://img.shields.io/npm/dm/vue-saas-kit?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-react)
+[![NPM Downloads](https://img.shields.io/npm/dm/modular-ui-kit-react?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-react)
 
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/eugenia-vitinschii/e3f532a4d6ca634ade757fa0cea0aea9/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
