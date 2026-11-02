@@ -1,35 +1,60 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
-import path from 'path';
+import { resolve } from 'node:path';
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    dts({ 
-      insertTypesEntry: true, 
-      include: ['src/lib'] 
-    })
-  ],
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/lib/index.ts'),
-      name: 'ModularUiKitReact',
-      fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') return 'style.css';
-          return assetInfo.name || '';
-        },
+export default defineConfig(({ command }) => {
+  const isBuild = command === 'build';
+
+  return {
+    plugins: [
+      react(),
+      ...(isBuild
+        ? [
+            dts({
+              tsconfigPath: './tsconfig.app.json',
+              entryRoot: 'src/lib',
+              include: ['src/lib/**/*'],
+              outDir: 'dist',
+              insertTypesEntry: true,
+              rollupTypes: false,
+            }),
+          ]
+        : []),
+    ],
+
+    resolve: {
+      alias: {
+        '@': resolve(import.meta.dirname, './src'),
       },
     },
-  },
+
+    ...(isBuild && {
+      build: {
+        lib: {
+          entry: resolve(import.meta.dirname, 'src/lib/index.ts'),
+          name: 'ModularUiKitReact',
+          formats: ['es', 'cjs'],
+          fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
+        },
+
+        rollupOptions: {
+          external: ['react', 'react-dom', 'react/jsx-runtime'],
+          output: {
+            globals: {
+              react: 'React',
+              'react-dom': 'ReactDOM',
+              'react/jsx-runtime': 'jsxRuntime',
+            },
+            assetFileNames: (assetInfo) => {
+              if (assetInfo.name?.endsWith('.css')) {
+                return 'modular-ui-kit-react.css';
+              }
+              return assetInfo.name || '';
+            },
+          },
+        },
+      },
+    }),
+  };
 });

@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import { MukText } from "../../../lib/components/typography/MukText";
-import { MukSelect, type MukSelectedOption } from "../../../lib/components/form/MukSelect";
+import { MukSelect, type MukSelectOption } from "../../../lib/components/form/MukSelect";
 
-const countryOptions: MukSelectedOption[] = [
+const countryOptions: MukSelectOption[] = [
   { value: "us", label: "United States" },
   { value: "ca", label: "Canada" },
   { value: "de", label: "Germany" },
