@@ -1,12 +1,13 @@
-import type {FC, ElementType, HTMLAttributes, ReactNode} from 'react'
+import type {FC, HTMLAttributes} from 'react'
 import type { UITextAlign, UITextType, UITextVariant } from '../../types/ui.types'
 
 export interface MukTextProps extends HTMLAttributes<HTMLElement>{
    variant?: UITextVariant;
-   as?: ElementType;
+   as?: React.ElementType;
    type?: UITextType;
    align?: UITextAlign;
-   children?: ReactNode;
+   children?: React.ReactNode;
+   [key: string]: any;
 }
 
 export const MukText: FC<MukTextProps> = ({
