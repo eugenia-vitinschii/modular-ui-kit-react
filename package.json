@@ -1,11 +1,11 @@
 {
   "name": "modular-ui-kit-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modular, accessible TypeScript-driven UI library for React.",
   "type": "module",
   "license": "MIT",
   "author": "Eugenia Vitinschii",
-"main": "./dist/index.cjs",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/src/lib/index.d.ts",
   "style": "./dist/modular-ui-kit-react.css",
@@ -20,8 +20,8 @@
     },
     "./*.css": {
       "default": "./dist/*.css"
-  }
-},
+    }
+  },
   "files": [
     "dist"
   ],
