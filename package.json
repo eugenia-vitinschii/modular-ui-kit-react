@@ -15,8 +15,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./style.css": "./dist/modular-ui-kit-react.css"
-  },
+    "./modular-ui-kit-react.css": {
+      "default": "./dist/modular-ui-kit-react.css"
+    },
+    "./*.css": {
+      "default": "./dist/*.css"
+  }
+},
   "files": [
     "dist"
   ],
