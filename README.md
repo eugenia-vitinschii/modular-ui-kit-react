@@ -9,6 +9,9 @@
 *Modular UI Kit React* A lightweight, modular React component library powered by SASS and unified design tokens. Built for seamless developer experience and modern web UI consistency.
 _________
 
+```import 'modular-ui-kit-react/modular-ui-kit-react.css'```
+
+
 ### ⭐️ MukText ⭐️
 A flexible typography component designed to render consistent text elements (p, h1–h6, span, a, etc.) with standardized styling and semantic control via the as polymorphic prop.
 
