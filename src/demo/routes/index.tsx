@@ -14,15 +14,15 @@ import TextareaView from "../pages/form/TextareaView"
 export const DemoRoutes = () => {
    return (
       <Routes>
-         <Route path='/' element = {<Navigate to='/text' replace/>}/>
-         <Route path='/text' element= {<TextView/>}/>
-         <Route path="/buttons" element={<ButtonView/>}/>
-         <Route path="/icon-buttons" element={<IconButtonView/>}/>
-         <Route path="/input" element={<InputView/>}/>
-         <Route path="/checkbox" element={<CheckboxView/>}/>
-         <Route path="/radio" element={<RadioView/>}/>
-         <Route path="/select" element={<SelectView/>}/>
-          <Route path="/textarea" element={<TextareaView/>}/>
+         <Route path='/' element = {<Navigate to='/demo/ui/text' replace/>}/>
+         <Route path='/demo/ui/text' element= {<TextView/>}/>
+         <Route path="/demo/ui/buttons" element={<ButtonView/>}/>
+         <Route path="/demo/ui/icon-buttons" element={<IconButtonView/>}/>
+         <Route path="/demo/ui/form/inputs" element={<InputView/>}/>
+         <Route path="/demo/ui/form/checkboxes" element={<CheckboxView/>}/>
+         <Route path="/demo/ui/form/radio" element={<RadioView/>}/>
+         <Route path="/demo/ui/form/selects" element={<SelectView/>}/>
+          <Route path="/demo/ui/form/textareas" element={<TextareaView/>}/>
       </Routes>
    )
 }
