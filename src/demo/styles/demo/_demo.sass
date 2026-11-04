@@ -1,3 +1,5 @@
+@use '../../../lib/styles/abstracts/muk-mixins' as *
+
 .demo-controls--row
    display: flex
    align-items: center
@@ -5,9 +7,36 @@
    flex-direction: row
    flex-wrap: wrap
 
-.demo-controls__buttons 
-   display: flex 
+.demo-controls__buttons
+   display: flex
    align-items: start
    justify-content: space-between
    flex-direction: column
    gap: 20px
+
+.demo-nav
+   &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+.demo-widget
+   position: fixed
+   z-index: 9999
+   right: 30px
+   bottom: 30px
+   &__menu
+      @include muk-container()
+      max-height: 70vh
+      overflow-y: auto
+      scrollbar-width: thin
+      position: absolute
+      bottom: 30px
+      right: 0
+      width: 240px
+
+/* === [mobile] === */
+@media (max-height: 569px)
+   .demo-widget
+      max-height: 250px
+      &__menu
