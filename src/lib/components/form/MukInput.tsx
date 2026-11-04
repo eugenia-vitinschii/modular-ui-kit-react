@@ -42,7 +42,7 @@ export const MukInput: FC<MukInputProps> = ({
 
    return(
       <div className={containerClasses}>
-        {label && (<label htmlFor="inputId" className="muk-form-label muk-form-label--top">{label}</label>)}
+        {label && (<label htmlFor={inputId} className="muk-form-label muk-form-label--top">{label}</label>)}
       <div className="muk-input__wrapper">
       <input 
          id={inputId}
