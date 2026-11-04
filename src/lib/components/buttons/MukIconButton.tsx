@@ -39,7 +39,7 @@ export const MukIconButton: FC<MukIconButtonProps> = ({
          className={buttonClasses} 
          disabled={disabled || loading}
          aria-busy={loading}
-         artia-label={ariaLabel ? String(ariaLabel): undefined}
+         aria-label={ariaLabel ? String(ariaLabel): undefined}
          {...props}
          >
          {!loading ? (
