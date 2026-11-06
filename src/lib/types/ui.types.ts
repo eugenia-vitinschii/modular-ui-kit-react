@@ -13,3 +13,6 @@ export type UIButtonType = "button" | "submit" | "reset"
 
 /* INPUT TYPE */
 export type UIInputType = "text" | "email" | "password" | "search" | "date" | "tel" | "number"
+
+/* EMPTY STATE VARIANT */
+export type UIEmptyStateVariant = 'secondary' | 'primary'
