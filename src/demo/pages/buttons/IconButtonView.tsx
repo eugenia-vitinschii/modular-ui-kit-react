@@ -34,13 +34,14 @@ function IconButtonView() {
           <div className="muk-page__content">
             <div className="demo-controls muk-section">
                <MukText type="muk-subheading">Demo controls</MukText>
-               <MukInput 
+               <div className="form-item">
+                  <MukInput 
                   value={demoText}
                   onChange={(val) => setDemoText(val)}
                   label="Custom text Preview"
                   placeholder="Type something..."
-                />
-                <br />
+                /> 
+               </div>
                <MukRadio name='buttons-demo'selectedValue={buttonState}
                onChange={(val) => setButtonState(val as DemoState)} value='normal' label="Normal"/>
                <MukRadio name='buttons-demo'selectedValue={buttonState}
