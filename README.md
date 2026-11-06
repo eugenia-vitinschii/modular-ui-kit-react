@@ -106,7 +106,7 @@ _________
 An accessible and customizable checkbox component with a custom visual box, flexible label positioning, and support for error and hint validation states. It handles boolean states (checked/unchecked) seamlessly while maintaining native HTML input accessibility (aria-invalid, aria-describedby).
 
 
-### MukCheckbox Props 
+#### MukCheckbox Props 
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -124,7 +124,7 @@ _________
 An accessible and customizable radio button component designed to work seamlessly within group selections. It supports custom selection states, side labels, and built-in error/hint validation messages, while fully respecting native HTML radio accessibility standards (aria-invalid, aria-describedby).
 
 
-### MukRadio Props 
+#### MukRadio Props 
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -144,7 +144,7 @@ _________
 
 An accessible dropdown select component built over the native HTML `<select>` element. It accepts a list of options, supports custom placeholders, labels, built-in validation states (errors and hints), and maintains full accessibility standards (aria-invalid, aria-describedby).
 
-### MukSelect Props 
+#### MukSelect Props 
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -164,7 +164,7 @@ _________
 
 A flexible and accessible multi-line text input component built over the native HTML `<textarea>`. It supports custom rows, auto-generated unique IDs, top labels, and built-in error/hint validation states while maintaining strict accessibility standards (`aria-invalid`, `aria-describedby`).
 
-### MukTextarea Props 
+#### MukTextarea Props 
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -177,3 +177,21 @@ A flexible and accessible multi-line text input component built over the native 
 | `error` | `string` | — | Error message string. Applies `is-error` style and takes precedence over hint. |
 | `id` | `string` | `useId()` | Unique identifier for the textarea, automatically generated if not provided. |
 | `disabled` | `boolean` | `false` | Disables user interaction and applies disabled visual styles. |
+
+_________
+
+### ⭐️ MukEmptyState ⭐️
+
+A dedicated feedback component designed to display empty data states, missing content, or search results that yielded no matches. It supports customizable titles, descriptions, sizing constraints, visual variants, and a custom action slot for user recovery actions (such as buttons or links).
+
+
+#### MukEmptyState Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | `string` | `"No data available"` | The main heading of the empty state (rendered as an `h3` subheading). |
+| `description` | `string` | `"There is nothing to display here at the moment. Please try refreshing the page"` | Explanatory text guiding the user on what happened or what to do next. |
+| `variant` | `UIEmptyStateVariant` | `'secondary'` | Visual style preset (`secondary`, `primary`). |
+| `width` | `string \| number` | — | Component width (handled by `formatSize`, supports numbers for `px` or string values like `"100%"`). |
+| `height` | `string \| number` | — | Component height (also handled via `formatSize`). |
+| `action` | `ReactNode` | — | Slot for interactive actions (e.g., a "Create Project" or "Refresh" button). |
