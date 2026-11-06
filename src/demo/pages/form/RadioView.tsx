@@ -2,41 +2,58 @@ import { useState } from "react";
 import { MukText } from "../../../lib/components/typography/MukText";
 import { MukRadio } from "../../../lib/components/form/MukRadio";
 
-
 function RadioView() {
-   const [selectedOption, setSelectedOption] = useState<string>("option1");
-
+  const [selectedPlan, setSelectedPlan] = useState<string>("starter");
+  const [errorPlan, setErrorPlan] = useState<string | null>(null);
   return (
     <div className="muk-page">
       <div className="muk-container">
         <div className="muk-page__wrapper">
           <MukText as="h2" type="muk-heading">
-            Checkbox Preview
+            Radio Preview
           </MukText>
           <div className="muk-page__content">
-            <div className="demo-controls muk-section">
-              <MukRadio
-               name="plan"
-               label="Basic"
-               value='option 1'
-               selectedValue={selectedOption}
-               onChange={(val) => setSelectedOption(val as string)}
-              />
-                 <MukRadio
-               name="oro"
-               label="Pro"
-               value='option 2'
-               selectedValue={selectedOption}
-               onChange={(val) => setSelectedOption(val as string)}
-              />
-              <MukRadio
-               name="business"
-               label="Business"
-               value='option 3'
-               selectedValue={selectedOption}
-               onChange={(val) => setSelectedOption(val as string)}
-               disabled
-              />
+            <div className="form muk-section">
+              <div className="form__item">
+                <MukRadio
+                  value="starter"
+                  name="billing-group"
+                  label="Starter Plan"
+                  selectedValue={selectedPlan}
+                  onChange={(val) => setSelectedPlan(val as string)}
+                />
+              </div>
+              <div className="form__item">
+                <MukRadio
+                  value="pro"
+                  name="billing-group"
+                  label="Pro Business"
+                  hint="$19/month, unlimited projects & team sharing"
+                  selectedValue={selectedPlan}
+                  onChange={(val) => setSelectedPlan(val as string)}
+                />
+              </div>
+              <div className="form__item">
+                <MukRadio
+                  value="enterprise"
+                  name="billing-group"
+                  label="Enterprise"
+                  hint="Custom solutions for large organizations"
+                  selectedValue={selectedPlan}
+                  onChange={(val) => setSelectedPlan(val as string)}
+                  disabled
+                />
+              </div>
+              <div className="form__item">
+                <MukRadio
+                  name="error-group"
+                  label="Accept terms & privacy policy"
+                  error="You must accept the terms before changing your plan"
+                  value="declined"
+                  selectedValue={errorPlan ?? undefined}
+                  onChange={(val) => setErrorPlan(val as string)}
+                />
+              </div>
             </div>
           </div>
         </div>
