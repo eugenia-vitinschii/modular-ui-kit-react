@@ -195,3 +195,20 @@ A dedicated feedback component designed to display empty data states, missing co
 | `width` | `string \| number` | — | Component width (handled by `formatSize`, supports numbers for `px` or string values like `"100%"`). |
 | `height` | `string \| number` | — | Component height (also handled via `formatSize`). |
 | `action` | `ReactNode` | — | Slot for interactive actions (e.g., a "Create Project" or "Refresh" button). |
+
+
+_________
+
+### ⭐️ MukErrorState ⭐️
+
+A dedicated feedback component designed to handle error states, failed data fetching, or system crashes gracefully. It supports customizable titles, descriptions, sizing constraints, and a custom action slot for recovery operations (such as a "Retry" or "Reload" button).
+
+#### MukErrorState Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | `string` | `"Oops! Something went wrong"` | The main error heading (rendered as a centered danger subheading `h3`). |
+| `description` | `string` | `"Failed to fetch data. Please try again."` | Explanatory text guiding the user on the failure and potential recovery. |
+| `width` | `string \| number` | — | Component width (handled by `formatSize`, supports numbers for `px` or string values like `"100%"`). |
+| `height` | `string \| number` | — | Component height (also handled via `formatSize`). |
+| `action` | `ReactNode` | — | Slot for interactive recovery actions (e.g., a "Retry" button). |
