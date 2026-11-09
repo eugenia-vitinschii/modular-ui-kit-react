@@ -11,7 +11,7 @@ export interface MukErrorStateProps {
    action?: React.ReactNode;
 }
 
-export const MukErrorSate: FC<MukErrorStateProps> = ({
+export const MukErrorState: FC<MukErrorStateProps> = ({
    title = "Oops! Something went wrong",
    description = 'Failed to fetch data. Please try again.',
    height,

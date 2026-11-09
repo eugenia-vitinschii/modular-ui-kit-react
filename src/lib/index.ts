@@ -13,6 +13,7 @@ export { MukSelect } from './components/form/MukSelect';
 export { MukTextarea } from './components/form/MukTextarea';
 
 export {MukEmptyState} from './components/feedback/MukEmptyState'
+export {MukErrorState} from './components/feedback/MukErrorState'
 
 export type { MukTextProps } from './components/typography/MukText';
 
@@ -26,6 +27,7 @@ export type { MukSelectProps, MukSelectOption } from './components/form/MukSelec
 export type { MukTextareaProps } from './components/form/MukTextarea';
 
 export type {MukEmptyStateProps} from './components/feedback/MukEmptyState'
+export type {MukErrorStateProps} from './components/feedback/MukErrorState'
 
 export type {
    UIVariant, 
