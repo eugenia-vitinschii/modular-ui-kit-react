@@ -2,6 +2,7 @@ import { MukText } from "../../../lib";
 
 import { MukEmptyState } from "../../../lib/components/feedback/MukEmptyState";
 import { MukErrorState } from "../../../lib/components/feedback/MukErrorState";
+import { MukSkeleton } from "../../../lib/components/feedback/MukSkeleton";
 
 function ComponentFlowView(){
    return(
@@ -22,6 +23,9 @@ function ComponentFlowView(){
                   </div>
                   <div className="muk-section">
                      <MukErrorState/>
+                  </div>
+                  <div className="muk-section">
+                     <MukSkeleton height="400px" type="circle"/>
                   </div>
                </div>
             </div>

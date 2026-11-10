@@ -14,6 +14,7 @@ export { MukTextarea } from './components/form/MukTextarea';
 
 export {MukEmptyState} from './components/feedback/MukEmptyState'
 export {MukErrorState} from './components/feedback/MukErrorState'
+export {MukSkeleton} from './components/feedback/MukSkeleton'
 
 export type { MukTextProps } from './components/typography/MukText';
 
@@ -28,6 +29,7 @@ export type { MukTextareaProps } from './components/form/MukTextarea';
 
 export type {MukEmptyStateProps} from './components/feedback/MukEmptyState'
 export type {MukErrorStateProps} from './components/feedback/MukErrorState'
+export type {MukSkeletonProps} from './components/feedback/MukSkeleton'
 
 export type {
    UIVariant, 
@@ -38,5 +40,6 @@ export type {
    UIButtonVariant, 
    UIButtonType, 
    UIInputType,
-   UIEmptyStateVariant
+   UIEmptyStateVariant,
+   UISkeletonType,
 } from './types/ui.types';
