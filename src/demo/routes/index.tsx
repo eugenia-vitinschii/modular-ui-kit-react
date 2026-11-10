@@ -9,6 +9,7 @@ import RadioView from "../pages/form/RadioView"
 import SelectView from "../pages/form/SelectView"
 import TextareaView from "../pages/form/TextareaView"
 import ComponentFlowView from "../pages/feedback/ComponentFlowView"
+import BadgesView from "../pages/data-display/BadgesView"
 
 
 
@@ -25,6 +26,7 @@ export const DemoRoutes = () => {
          <Route path="/demo/ui/form/selects" element={<SelectView/>}/>
          <Route path="/demo/ui/form/textareas" element={<TextareaView/>}/>
          <Route path="/demo/ui/flow" element={<ComponentFlowView/>}/>
+         <Route path="demo/ui/badge" element= {<BadgesView/>}/>
       </Routes>
    )
 }
