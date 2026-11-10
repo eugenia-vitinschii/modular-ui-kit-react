@@ -1,9 +1,7 @@
 # modular-ui-kit-react
 
 [![NPM Version](https://img.shields.io/npm/v/modular-ui-kit-react?color=42b883)](https://www.npmjs.com/package/modular-ui-kit-react)
-
 [![NPM Downloads](https://img.shields.io/npm/dm/modular-ui-kit-react?color=35495e)](https://www.npmjs.com/package/modular-ui-kit-react)
-
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/eugenia-vitinschii/e3f532a4d6ca634ade757fa0cea0aea9/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 
 *Modular UI Kit React* A lightweight, modular React component library powered by SASS and unified design tokens. Built for seamless developer experience and modern web UI consistency.
@@ -212,3 +210,18 @@ A dedicated feedback component designed to handle error states, failed data fetc
 | `width` | `string \| number` | — | Component width (handled by `formatSize`, supports numbers for `px` or string values like `"100%"`). |
 | `height` | `string \| number` | — | Component height (also handled via `formatSize`). |
 | `action` | `ReactNode` | — | Slot for interactive recovery actions (e.g., a "Retry" button). |
+
+_________
+
+### ⭐️ MukSkeleton ⭐️
+
+A lightweight loading placeholder component designed to mimic the layout of actual content while data is being fetched. It supports different preset shapes (`text`, `circle`, `rectangular`), custom sizing constraints, and an optional animation shimmer effect.
+
+#### MukSkeleton Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `type` | `UISkeletonType` | `'text'` | Preset visual shape (`'text'`, `'circle'`, `'rectangular'`). Automatically matches `width` and `height` if set to `'circle'`. |
+| `shimmer` | `boolean` | `true` | Enables or disables the glowing loading animation effect. |
+| `width` | `string \| number` | — | Explicit width of the skeleton (supports numbers for `px` or custom CSS values like `"100%"`). |
+| `height` | `string \| number` | — | Explicit height of the skeleton. |
