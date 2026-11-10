@@ -225,3 +225,17 @@ A lightweight loading placeholder component designed to mimic the layout of actu
 | `shimmer` | `boolean` | `true` | Enables or disables the glowing loading animation effect. |
 | `width` | `string \| number` | — | Explicit width of the skeleton (supports numbers for `px` or custom CSS values like `"100%"`). |
 | `height` | `string \| number` | — | Explicit height of the skeleton. |
+
+_________
+
+### ⭐️ MukBadge ⭐️
+A compact status and indicator component used to highlight metadata, counts, or categorical states. It supports multiple visual variants, predefined sizing options, custom icon slots for SVGs or React elements, and automatic text styling via `MukText`.
+
+#### MukBadge Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `variant` | `UITextVariant` | `'primary'` | Visual style preset (`primary`, `secondary`, `danger`, `warning`, `success`, `muted`). |
+| `size` | `UISize` | `'md'` | Component size scale (`'sm'`, `'md'`, `'lg'`). |
+| `text` | `ReactNode` | — | The text content displayed inside the badge. |
+| `icon` | `ReactNode` | — | Optional slot for an icon (SVG, graphic, or icon component) rendered before the text. |
