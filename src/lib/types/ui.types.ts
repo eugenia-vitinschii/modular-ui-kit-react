@@ -16,3 +16,6 @@ export type UIInputType = "text" | "email" | "password" | "search" | "date" | "t
 
 /* EMPTY STATE VARIANT */
 export type UIEmptyStateVariant = 'secondary' | 'primary'
+
+/* SKELTON TYPE */
+export type UISkeletonType = 'text' | 'circle' | 'rect'
