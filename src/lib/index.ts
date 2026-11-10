@@ -16,6 +16,10 @@ export {MukEmptyState} from './components/feedback/MukEmptyState'
 export {MukErrorState} from './components/feedback/MukErrorState'
 export {MukSkeleton} from './components/feedback/MukSkeleton'
 
+export {MukBadge} from './components/data-display/MukBadge'
+
+
+
 export type { MukTextProps } from './components/typography/MukText';
 
 export type { MukButtonProps } from './components/buttons/MukButton';
@@ -30,6 +34,8 @@ export type { MukTextareaProps } from './components/form/MukTextarea';
 export type {MukEmptyStateProps} from './components/feedback/MukEmptyState'
 export type {MukErrorStateProps} from './components/feedback/MukErrorState'
 export type {MukSkeletonProps} from './components/feedback/MukSkeleton'
+
+export type {MukBadgeProps} from './components/data-display/MukBadge'
 
 export type {
    UIVariant, 
