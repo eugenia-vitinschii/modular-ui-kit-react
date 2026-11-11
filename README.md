@@ -239,3 +239,22 @@ A compact status and indicator component used to highlight metadata, counts, or 
 | `size` | `UISize` | `'md'` | Component size scale (`'sm'`, `'md'`, `'lg'`). |
 | `text` | `ReactNode` | — | The text content displayed inside the badge. |
 | `icon` | `ReactNode` | — | Optional slot for an icon (SVG, graphic, or icon component) rendered before the text. |
+
+_________
+
+### ⭐️ MukToast ⭐️
+
+A lightweight, decoupled notification system built using the **Observer (Subscription) Pattern**. It allows you to trigger toast notifications imperatively from anywhere in your application (components, handlers, or utility functions) without needing global state providers.
+
+Add `MukToastContainer` at the App Root
+Place the `<MukToastContainer />` once inside your top-level component (e.g., `App.tsx` or `layout.tsx`). You **do not** need to render individual toasts manually.
+
+#### MukToast Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `toast` | `Toast` | — | **Yes** | Toast data object containing `id`, `message`, `variant`, and `duration`. |
+| `toast.id` | `string` | — | **Yes** | Unique identifier generated for the toast instance. |
+| `toast.message` | `string` | — | **Yes** | Text content displayed inside the toast notification. |
+| `toast.variant` | `UIVariant` | `'secondary'` | No | Visual style variant (`'primary'`, `'secondary'`, `'success'`, `'warning'`, `'danger'`). |
+| `toast.duration` | `number` | `3000` | No | Auto-dismiss countdown timer duration in milliseconds. |
