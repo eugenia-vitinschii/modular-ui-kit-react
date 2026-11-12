@@ -1,6 +1,6 @@
 {
   "name": "modular-ui-kit-react",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A modular, accessible TypeScript-driven UI library for React.",
   "type": "module",
   "license": "MIT",
