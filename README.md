@@ -258,3 +258,20 @@ Place the `<MukToastContainer />` once inside your top-level component (e.g., `A
 | `toast.message` | `string` | — | **Yes** | Text content displayed inside the toast notification. |
 | `toast.variant` | `UIVariant` | `'secondary'` | No | Visual style variant (`'primary'`, `'secondary'`, `'success'`, `'warning'`, `'danger'`). |
 | `toast.duration` | `number` | `3000` | No | Auto-dismiss countdown timer duration in milliseconds. |
+
+_________
+
+### ⭐️ MukModal ⭐️
+
+A portal-based modal dialog component rendered directly into `document.body` via React's `createPortal`. It supports backdrop click dismissal, `Escape` key closing, automatic body scroll locking, and customizable slots via `ReactNode` props.
+
+#### MukModal Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `open` | `boolean` | — | **Yes** | Controls the visibility state of the modal dialog. |
+| `onClose` | `() => void` | — | **Yes** | Callback function triggered when the modal requests to close (backdrop click or `Escape` key). |
+| `title` | `string` | `undefined` | No | Optional header title rendered at the top of the modal. |
+| `variant` | `UIVariant` | `'secondary'` | No | Visual theme variant (`'primary'`, `'secondary'`, `'success'`, `'warning'`, `'danger'`). |
+| `content` | `React.ReactNode` | `undefined` | No | Main body content rendered inside the modal container. |
+| `actions` | `React.ReactNode` | `undefined` | No | Footer slot for action buttons (e.g., Confirm, Cancel). |

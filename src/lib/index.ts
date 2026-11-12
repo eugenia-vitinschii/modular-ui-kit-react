@@ -20,7 +20,7 @@ export {MukToastContainer} from './components/feedback/MukToastContainer'
 
 export {MukBadge} from './components/data-display/MukBadge'
 
-
+export {MukModal} from './components/overlays/MukModal'
 
 export type { MukTextProps } from './components/typography/MukText';
 
@@ -38,6 +38,8 @@ export type {MukErrorStateProps} from './components/feedback/MukErrorState'
 export type {MukSkeletonProps} from './components/feedback/MukSkeleton'
 
 export type {MukBadgeProps} from './components/data-display/MukBadge'
+
+export type {MukModalProps} from './components/overlays/MukModal'
 
 export {useMukToast, toast} from './components/feedback/useMukToast'
 export type { MukToastProps} from './components/feedback/MukToast'
