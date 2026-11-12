@@ -1,8 +1,10 @@
-import { UIVariant } from "../../../lib";
+import { useState } from "react";
+import type { UIVariant } from "../../../lib";
 
-import { MukText } from "../../../lib";
+import { MukCheckbox, MukInput, MukText } from "../../../lib";
 import { MukButton } from "../../../lib";
 import { useMukToast } from "../../../lib/components/feedback/useMukToast";
+import { MukModal } from "../../../lib/components/overlays/MukModal";
 
 const variants: UIVariant[] = [
   "primary",
@@ -21,12 +23,46 @@ const toastMessages: Record<UIVariant, string> = {
 };
 
 function FeedbackDemoView() {
+  //toast
   const { addToast } = useMukToast();
 
   function triggerToast(variant: UIVariant) {
     const message = toastMessages[variant];
     addToast(message, variant, 3000);
   }
+
+  //modal
+  let [isModalOpen, setIsModalOpen] = useState(false);
+  let [activeVariant, setActiveVariant] = useState<UIVariant>("success");
+  let [activeTitle, setActiveTitle] = useState("");
+
+  //modalForm State
+  let [confirmText, setConfirmText] = useState("");
+  let [inputError, setInputError] = useState("");
+  let [isAgreed, setIsAgreed] = useState(false);
+
+  function handleConfirm() {
+    if (activeVariant === "danger" && confirmText !== "DELETE") {
+      setInputError( "Please type DELETE exactly to confirm!");
+      return;
+    }
+    const message = `Action confirmed for variant ${activeVariant}`;
+    addToast(message, "success", 3000);
+
+    setIsModalOpen(false);
+  }
+
+  function openModal(variant: UIVariant) {
+    setActiveVariant(variant);
+    setActiveTitle(`${variant.toUpperCase()} Action Required`);
+
+    setConfirmText('')
+    setInputError('')
+    setIsAgreed(false)
+
+    setIsModalOpen(true);
+  }
+
   return (
     <div className="muk-page">
       <div className="muk-container">
@@ -38,7 +74,7 @@ function FeedbackDemoView() {
           </div>
           <div className="muk-page__content">
             <div className="demo-controls muk-section">
-              <MukText type="muk-subheading">Demo controls</MukText>
+              <MukText type="muk-subheading">Demo controls [Toast]</MukText>
               <div className="demo-controls__buttons">
                 {variants.map((variant) => (
                   <MukButton
@@ -52,7 +88,59 @@ function FeedbackDemoView() {
                 ))}
               </div>
             </div>
+            <div className="demo-controls muk-section">
+              <MukText type="muk-subheading">Demo controls [Modal]</MukText>
+              <div className="demo-controls__buttons">
+                {variants.map((variant) => (
+                  <MukButton
+                    key={variant}
+                    onClick={() => openModal(variant)}
+                    size="sm"
+                    variant={variant}
+                  >
+                    Open {variant} modal
+                  </MukButton>
+                ))}
+              </div>
+            </div>
           </div>
+          <MukModal
+            open={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            title={activeTitle}
+            variant={activeVariant}
+            content={
+              <>
+                <MukText>variant: {activeVariant}</MukText>
+                {activeVariant === "danger" && (
+                  <MukInput
+                    value={confirmText}
+                    onChange={(val) => setConfirmText(val)}
+                    placeholder="Type 'DELETE' to confirm"
+                    error={inputError}
+                  />
+                )}
+                {
+                  activeVariant === 'warning' && (
+                    <MukCheckbox
+                      label="I accept the risk and want to proceed"
+                      value={isAgreed}
+                      onChange={(val) => setIsAgreed(val)}
+                    />
+                  )
+                }
+              </>
+            }
+            actions = {
+              <>
+              <MukButton variant="secondary" onClick={() => setIsModalOpen(false)}>Cancel</MukButton>
+              <MukButton variant={activeVariant} onClick={ handleConfirm}
+              disabled={ activeVariant === 'warning' && !isAgreed}
+              >Confirm</MukButton>
+               </>
+            }
+           
+          />
         </div>
       </div>
     </div>
