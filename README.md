@@ -275,3 +275,24 @@ A portal-based modal dialog component rendered directly into `document.body` via
 | `variant` | `UIVariant` | `'secondary'` | No | Visual theme variant (`'primary'`, `'secondary'`, `'success'`, `'warning'`, `'danger'`). |
 | `content` | `React.ReactNode` | `undefined` | No | Main body content rendered inside the modal container. |
 | `actions` | `React.ReactNode` | `undefined` | No | Footer slot for action buttons (e.g., Confirm, Cancel). |
+
+
+_________
+
+### ⭐️ MukCommentItem ⭐️
+
+ A structured comment item component designed for feeds, threads, and discussions. It features a three-tier avatar fallback system (custom React node -> image URL -> default SVG placeholder), optional author profile linking, metadata captions, and a dedicated slot for action buttons
+
+
+#### MukCommentItem Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `name` | `string` | — | **Yes** | Display name of the comment author. |
+| `created` | `string` | — | **Yes** | Formatted timestamp or relative date string (e.g., `"2 hours ago"`). |
+| `text` | `string` | `undefined` | No | Main text content of the comment. |
+| `about` | `string` | `undefined` | No | Secondary author subtitle, role, or badge text displayed below the header. |
+| `avatarSrc` | `string` | `undefined` | No | URL for the author's avatar image. Used if `avatar` node is not provided. |
+| `avatar` | `React.ReactNode` | `undefined` | No | Custom avatar element (e.g., custom `<img />`, badge, or initials) taking priority over `avatarSrc`. |
+| `authorProfile` | `string` | `undefined` | No | URL link for the author's profile. Renders the author's name as an `<a>` tag instead of `<p>`. |
+| `actions` | `React.ReactNode` | `undefined` | No | Footer slot for interactive controls such as Reply, Like, or Delete buttons. |
