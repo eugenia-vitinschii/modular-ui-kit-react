@@ -11,6 +11,7 @@ import TextareaView from "../pages/form/TextareaView"
 import ComponentFlowView from "../pages/feedback/ComponentFlowView"
 import BadgesView from "../pages/data-display/BadgesView"
 import FeedbackDemoView from "../pages/feedback/FeedbackDemoView"
+import CommentView from "../pages/comments/CommentView"
 
 
 
@@ -29,6 +30,7 @@ export const DemoRoutes = () => {
          <Route path="/demo/ui/flow" element={<ComponentFlowView/>}/>
          <Route path="demo/ui/badge" element= {<BadgesView/>}/>
          <Route path="demo/ui/feedback" element= {<FeedbackDemoView/>}/>
+          <Route path="demo/ui/comments" element= {<CommentView/>}/>
       </Routes>
    )
 }
