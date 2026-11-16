@@ -21,6 +21,7 @@ export {MukToastContainer} from './components/feedback/MukToastContainer'
 export {MukBadge} from './components/data-display/MukBadge'
 
 export {MukCommentItem} from './components/comments/MukCommentItem'
+export {MukCommentForm} from './components/comments/MukCommentForm'
 
 export {MukModal} from './components/overlays/MukModal'
 
@@ -43,6 +44,8 @@ export type {MukBadgeProps} from './components/data-display/MukBadge'
 
 export type {MukModalProps} from './components/overlays/MukModal'
 export type {MukCommentItemProps} from './components/comments/MukCommentItem'
+export type {MukCommentFormProps} from './components/comments/MukCommentForm'
+
 export {useMukToast, toast} from './components/feedback/useMukToast'
 export type { MukToastProps} from './components/feedback/MukToast'
 
