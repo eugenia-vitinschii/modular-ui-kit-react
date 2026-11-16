@@ -296,3 +296,21 @@ _________
 | `avatar` | `React.ReactNode` | `undefined` | No | Custom avatar element (e.g., custom `<img />`, badge, or initials) taking priority over `avatarSrc`. |
 | `authorProfile` | `string` | `undefined` | No | URL link for the author's profile. Renders the author's name as an `<a>` tag instead of `<p>`. |
 | `actions` | `React.ReactNode` | `undefined` | No | Footer slot for interactive controls such as Reply, Like, or Delete buttons. |
+
+_________
+
+### ⭐️ MukCommentForm ⭐️
+
+A controlled comment submission form component with built-in validation, keyboard shortcut support (`Ctrl + Enter` / `Cmd + Enter`), loading and disabled states, and a three-tier avatar fallback system (custom React node -> image URL -> default SVG placeholder).
+
+#### MukCommentForm Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `avatarSrc` | `string` | `undefined` | No | URL for the current user's avatar image. Used if `avatar` node is not provided. |
+| `avatar` | `React.ReactNode` | `undefined` | No | Custom avatar element (e.g., custom `<img />`, badge, or initials) taking priority over `avatarSrc`. |
+| `placeholder` | `string` | `'Type ...'` | No | Placeholder text displayed inside the comment textarea. |
+| `disabled` | `boolean` | `false` | No | Disables the textarea and submit button. |
+| `loading` | `boolean` | `false` | No | Shows a loading spinner on the submit button and disables form interaction during submission. |
+| `resetOnSubmit` | `boolean` | `true` | No | Automatically clears the textarea input after a successful submission. |
+| `onSubmit` | `(payload: { content: string }) => void` | `undefined` | No | Callback triggered upon valid form submission via button click or `Ctrl/Cmd + Enter`, receiving the trimmed comment text. |
