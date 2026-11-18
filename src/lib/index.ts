@@ -19,6 +19,7 @@ export {MukToast} from './components/feedback/MukToast'
 export {MukToastContainer} from './components/feedback/MukToastContainer'
 
 export {MukBadge} from './components/data-display/MukBadge'
+export {MukMetricCard} from './components/data-display/MukMetricCard'
 
 export {MukCommentItem} from './components/comments/MukCommentItem'
 export {MukCommentForm} from './components/comments/MukCommentForm'
@@ -41,6 +42,7 @@ export type {MukErrorStateProps} from './components/feedback/MukErrorState'
 export type {MukSkeletonProps} from './components/feedback/MukSkeleton'
 
 export type {MukBadgeProps} from './components/data-display/MukBadge'
+export type {MukMetricCardProps} from './components/data-display/MukMetricCard'
 
 export type {MukModalProps} from './components/overlays/MukModal'
 export type {MukCommentItemProps} from './components/comments/MukCommentItem'
