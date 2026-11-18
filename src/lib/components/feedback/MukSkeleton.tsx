@@ -1,8 +1,8 @@
-import React, { type FC } from "react";
+import React, { HTMLAttributes, type FC } from "react";
 
 import type { UISkeletonType } from "../../types/ui.types";
 
-export interface MukSkeletonProps{
+export interface MukSkeletonProps extends HTMLAttributes<HTMLDivElement>{
    type?: UISkeletonType;
    width?: string | number
    height?: string | number
@@ -14,6 +14,9 @@ export const MukSkeleton: FC<MukSkeletonProps> = ({
    shimmer =  true,
    height,
    width,
+   className,
+   style,
+   ...rest
 }) =>{
 
    const computedStyle: React.CSSProperties = React.useMemo(() => {
@@ -36,12 +39,12 @@ export const MukSkeleton: FC<MukSkeletonProps> = ({
             sizes.width = heightValue
          }
       }
-      return sizes
+      return {...sizes, ...style}
    }, [width, height, type])
 
-   const skeletonClasses = ["muk-skeleton",`muk-skeleton__${type}`, shimmer ? "muk-shimmer" : ""].filter(Boolean).join(" ");
+   const skeletonClasses = ["muk-skeleton",`muk-skeleton__${type}`, shimmer ? "muk-shimmer" : "", className].filter(Boolean).join(" ");
 
    return (
-      <div className={skeletonClasses} style={computedStyle}></div>
+      <div className={skeletonClasses} style={computedStyle} {...rest}></div>
    )
 }
