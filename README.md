@@ -314,3 +314,21 @@ A controlled comment submission form component with built-in validation, keyboar
 | `loading` | `boolean` | `false` | No | Shows a loading spinner on the submit button and disables form interaction during submission. |
 | `resetOnSubmit` | `boolean` | `true` | No | Automatically clears the textarea input after a successful submission. |
 | `onSubmit` | `(payload: { content: string }) => void` | `undefined` | No | Callback triggered upon valid form submission via button click or `Ctrl/Cmd + Enter`, receiving the trimmed comment text. |
+
+_________
+
+### ⭐️ MukMetricCard ⭐️
+
+A dashboard KPI card component designed to display key metrics with automatic trend calculation, directional indicator badges, invert logic for negative-is-good metrics (such as bounce or error rates), custom icon support, and built-in skeleton loading states.
+
+#### MukMetricCard Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `title` | `string` | — | Yes | The label or title of the metric displayed above the value. |
+| `value` | `string \| null` | — | Yes | The primary metric figure or formatted value to display. |
+| `change` | `number \| null` | `undefined` | No | Percentage change value used to automatically determine the trend status (`success`, `danger`, or `neutral`) and directional arrow. |
+| `changePeriod` | `string` | `undefined` | No | Descriptive timeframe label accompanying the change badge (e.g., `'vs last month'`). |
+| `invert` | `boolean` | `false` | No | Inverts the trend color logic so that positive changes render as `danger` and negative changes render as `success`. |
+| `loading` | `boolean` | `false` | No | Replaces the value, change badge, and period text with skeleton placeholders while data is being fetched. |
+| `icon` | `React.ReactNode` | Default SVG icon | No | Custom icon element rendered in the top-right corner of the card, overriding the default fallback icon. |
