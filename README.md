@@ -332,3 +332,17 @@ A dashboard KPI card component designed to display key metrics with automatic tr
 | `invert` | `boolean` | `false` | No | Inverts the trend color logic so that positive changes render as `danger` and negative changes render as `success`. |
 | `loading` | `boolean` | `false` | No | Replaces the value, change badge, and period text with skeleton placeholders while data is being fetched. |
 | `icon` | `React.ReactNode` | Default SVG icon | No | Custom icon element rendered in the top-right corner of the card, overriding the default fallback icon. |
+
+_________
+
+### ⭐️ MukPagination ⭐️
+
+A responsive pagination component that automatically calculates page ranges with ellipsis truncation for large page counts, provides previous/next navigation controls, and adapts cleanly between desktop page buttons and a compact mobile page indicator.
+
+#### MukPaginatio Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `page` | `number` | — | Yes | The currently active page number (1-indexed). |
+| `totalPages` | `number` | — | Yes | The total number of available pages. |
+| `onChange` | `(page: number) => void` | `undefined` | No | Callback fired when the user selects a new page or clicks the previous/next buttons. |
