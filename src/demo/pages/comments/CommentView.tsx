@@ -72,7 +72,6 @@ function CommentView() {
               onChange={(val) => setShowAbout(val)}
               />
             </div>
-          </div>
           <div className="muk-comment-wrapper  muk-section">
               <MukCommentItem
                 name="Eugenia Vitinschii" created="5 minutes ago"
@@ -121,6 +120,7 @@ function CommentView() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
