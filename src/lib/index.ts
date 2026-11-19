@@ -25,6 +25,8 @@ export {MukCommentItem} from './components/comments/MukCommentItem'
 export {MukCommentForm} from './components/comments/MukCommentForm'
 
 export {MukModal} from './components/overlays/MukModal'
+export {MukPagination} from './components/navigation/MukPagination'
+
 
 export type { MukTextProps } from './components/typography/MukText';
 
@@ -47,6 +49,8 @@ export type {MukMetricCardProps} from './components/data-display/MukMetricCard'
 export type {MukModalProps} from './components/overlays/MukModal'
 export type {MukCommentItemProps} from './components/comments/MukCommentItem'
 export type {MukCommentFormProps} from './components/comments/MukCommentForm'
+
+export type {MukPaginationProps} from './components/navigation/MukPagination'
 
 export {useMukToast, toast} from './components/feedback/useMukToast'
 export type { MukToastProps} from './components/feedback/MukToast'
