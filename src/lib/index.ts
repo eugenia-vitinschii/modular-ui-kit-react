@@ -1,5 +1,5 @@
 // @ts-ignore
-import './styles/lib.sass'
+import 'modular-ui-kit-styles'
 
 export { MukText } from './components/typography/MukText';
 
