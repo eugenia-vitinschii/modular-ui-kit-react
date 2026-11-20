@@ -346,3 +346,14 @@ A responsive pagination component that automatically calculates page ranges with
 | `page` | `number` | — | Yes | The currently active page number (1-indexed). |
 | `totalPages` | `number` | — | Yes | The total number of available pages. |
 | `onChange` | `(page: number) => void` | `undefined` | No | Callback fired when the user selects a new page or clicks the previous/next buttons. |
+_________
+
+### ⭐️ MukBreadcrumbs ⭐️
+
+A navigation breadcrumb trail component that renders the current page hierarchy with router links, a back-navigation icon button, and automatic hiding on the root path (`/`).
+
+#### ЬukBreadcrumbs Props
+
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `items` | `BreadcrumbItem[]` | — | Yes | Ordered array of breadcrumb objects (`{ label: string; to: string }`) representing the navigation path. |
