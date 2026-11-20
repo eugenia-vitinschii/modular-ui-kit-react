@@ -352,7 +352,7 @@ _________
 
 A navigation breadcrumb trail component that renders the current page hierarchy with router links, a back-navigation icon button, and automatic hiding on the root path (`/`).
 
-#### ЬukBreadcrumbs Props
+#### MukBreadcrumbs Props
 
 | Prop | Type | Default | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
