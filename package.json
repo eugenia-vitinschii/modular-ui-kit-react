@@ -73,12 +73,12 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.2",
     "vite": "^8.3.4",
-    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-dts": "^5.1.2",
     "vite-plugin-lib-inject-css": "^2.2.2"
   },
   "dependencies": {
     "chart.js": "^4.6.1",
-    "modular-ui-kit-styles": "^1.0.2",
+    "modular-ui-kit-styles": "^1.0.5",
     "react-transition-group": "^4.4.5"
   }
 }
