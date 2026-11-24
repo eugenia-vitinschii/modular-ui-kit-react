@@ -357,3 +357,11 @@ A navigation breadcrumb trail component that renders the current page hierarchy 
 | Prop | Type | Default | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `items` | `BreadcrumbItem[]` | — | Yes | Ordered array of breadcrumb objects (`{ label: string; to: string }`) representing the navigation path. |
+
+_________
+
+### ⭐️ MukChart ⭐️
+
+A responsive data visualization wrapper built on Chart.js that supports multiple chart types and automatically handles loading skeletons and empty data states.
+
+
