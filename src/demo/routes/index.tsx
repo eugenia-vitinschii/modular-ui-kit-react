@@ -13,6 +13,7 @@ import BadgesView from "../pages/data-display/BadgesView"
 import FeedbackDemoView from "../pages/feedback/FeedbackDemoView"
 import CommentView from "../pages/comments/CommentView"
 import MetricCardView from "../pages/data-display/MetricCardView"
+import ChartView from "../pages/data-display/ChartView"
 
 
 
@@ -33,6 +34,7 @@ export const DemoRoutes = () => {
          <Route path="demo/ui/feedback" element= {<FeedbackDemoView/>}/>
          <Route path="demo/ui/comments" element= {<CommentView/>}/>
          <Route path="/demo/ui/metrics" element = {<MetricCardView/>}/>
+         <Route path="/demo/ui/charts" element = {<ChartView/>}/>
       </Routes>
    )
 }
