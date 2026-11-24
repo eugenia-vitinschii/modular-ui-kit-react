@@ -14,6 +14,7 @@ import FeedbackDemoView from "../pages/feedback/FeedbackDemoView"
 import CommentView from "../pages/comments/CommentView"
 import MetricCardView from "../pages/data-display/MetricCardView"
 import ChartView from "../pages/data-display/ChartView"
+import TableView from "../pages/data-display/TableView"
 
 
 
@@ -35,6 +36,7 @@ export const DemoRoutes = () => {
          <Route path="demo/ui/comments" element= {<CommentView/>}/>
          <Route path="/demo/ui/metrics" element = {<MetricCardView/>}/>
          <Route path="/demo/ui/charts" element = {<ChartView/>}/>
+         <Route path="/demo/ui/table" element = {<TableView/>}/>
       </Routes>
    )
 }
