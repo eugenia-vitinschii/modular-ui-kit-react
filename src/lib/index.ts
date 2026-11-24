@@ -20,7 +20,7 @@ export {MukToastContainer} from './components/feedback/MukToastContainer'
 
 export {MukBadge} from './components/data-display/MukBadge'
 export {MukMetricCard} from './components/data-display/MukMetricCard'
-
+export {MukChart} from './components/data-display/MukChart'
 export {MukCommentItem} from './components/comments/MukCommentItem'
 export {MukCommentForm} from './components/comments/MukCommentForm'
 
@@ -53,7 +53,7 @@ export type {MukCommentFormProps} from './components/comments/MukCommentForm'
 
 export type {MukPaginationProps} from './components/navigation/MukPagination'
 export type { MukBreadcrumbsProps, BreadcrumbItem} from './components/navigation/MukBreadcrumbs'
-
+export type {MukChartProps} from './components/data-display/MukChart'
 export {useMukToast, toast} from './components/feedback/useMukToast'
 export type { MukToastProps} from './components/feedback/MukToast'
 
