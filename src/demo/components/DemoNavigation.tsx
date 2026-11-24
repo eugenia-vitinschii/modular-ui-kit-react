@@ -55,7 +55,7 @@ export const DemoNavigation = ({onClose}: DemoNavigationProps) => {
    return (
       <aside className="demo-nav">
          <div className="demo-nav__header">
-            <MukText>UI Kit Showcase</MukText>
+            <MukText type="muk-subheading">UI Kit Showcase</MukText>
             <MukIconButton aria-label="Close Demo" onClick={onClose}> 
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                <path
