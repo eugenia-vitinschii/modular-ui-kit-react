@@ -364,4 +364,14 @@ _________
 
 A responsive data visualization wrapper built on Chart.js that supports multiple chart types and automatically handles loading skeletons and empty data states.
 
+#### MukChart Props
 
+| Prop | Type | Default | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `data` | `ChartData \| null` | — | Yes | Chart.js data object containing labels and datasets to render. |
+| `title` | `string` | `undefined` | No | Optional heading text displayed above the chart container. |
+| `type` | `ChartType` | `'bar'` | No | Type of chart to render (`'bar'`, `'line'`, `'pie'`, `'doughnut'`, etc.). |
+| `options` | `ChartOptions` | `undefined` | No | Custom Chart.js configuration options merged with responsive defaults. |
+| `height` | `string \| number` | `'300px'` | No | Height of the chart wrapper, loading skeleton, and empty state container. |
+| `loading` | `boolean` | `false` | No | Displays a full-size skeleton placeholder while chart data is loading. |
+| `emptyText` | `string` | `'No data available'` | No | Message displayed inside the empty state when no dataset values are provided. |
