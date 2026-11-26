@@ -1,5 +1,6 @@
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { DemoRoutes } from "./demo/routes";
+import { ErrorRoutes } from "./errors/routes";
 import { AppHeader } from "./demo/components/AppHeader";
 import { AppFooter } from "./demo/components/AppFooter";
 import { DemoWidget } from "./demo/components/DemoWidget";
@@ -28,9 +29,12 @@ const ROUTE_TITLES: Record<string, string> = {
   "/demo/ui/comments": "Comments",
   "/demo/ui/metrics": "Metric Card",
 };
+const BLANK_ROUTES = ["/401", "/404", "/500", "/403"];
+
 
 function AppContent() {
   const { pathname } = useLocation();
+  const isBlankLayout = BLANK_ROUTES.includes(pathname);
 
   const breadcrumbItems = useMemo(() => {
     const segments = pathname.split("/").filter(Boolean);
@@ -46,6 +50,17 @@ function AppContent() {
     }
     return items;
   }, [pathname]);
+
+  if (isBlankLayout){
+    return(
+      <div className="muk-wrapper">
+        <div className="muk-content">
+           <ErrorRoutes/>
+            <MukToastContainer />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="muk-wrapper">
